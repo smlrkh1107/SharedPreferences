@@ -7,9 +7,9 @@ class ContextUtil {
 
     companion object{ // Java의 static 변수 / 메쏘드에 해당하는 코드들을 적는 영역.
 
-        val prefName = "MyPref" // id를 받아 저장할 ""파일명""
-        val USER_ID = "USER_ID" // 저장될 항목의 이름.(그 사람 코드? 그사람이 사용하는 정보(id)XXX)
-        val ID_SAVE = "ID_SAVE"
+        private val prefName = "MyPref" // id를 받아 저장할 ""파일명""
+        private val USER_ID = "USER_ID" // 저장될 항목의 이름.(그 사람 코드? 그사람이 사용하는 정보(id)XXX)
+        private val ID_SAVE = "ID_SAVE"
 
 //        setter:데이터 저장용 함수
         fun setUserId (context: Context, inputId:String){ //★메모장 파일을 여는 행위
