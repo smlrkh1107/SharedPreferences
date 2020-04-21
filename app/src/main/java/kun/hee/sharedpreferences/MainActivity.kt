@@ -22,8 +22,7 @@ class MainActivity : BaseActivity() {
 
     override fun setValues() {
 
-        //        class자체가 변수로 받을 수 있다.
-        ContextUtil.prefName
+        idEdt.setText(ContextUtil.getUserId(mContext)) //editText는  settext쓰고, textview는 .text = 함.
 
     }
 
