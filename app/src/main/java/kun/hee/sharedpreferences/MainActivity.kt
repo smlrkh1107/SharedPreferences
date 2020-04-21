@@ -24,8 +24,16 @@ class MainActivity : BaseActivity() {
 
 
         loginBtn.setOnClickListener {
-            val inputId = idEdt.text.toString()
-            ContextUtil.setUserId(mContext, inputId)
+//          비밀번호가 1234인지 확인 => 맞다면 재검사.
+//          체크박스가 체크되어있는지 true : 저장
+//           비밀번호가 맞다면 그제서야 아이디 저장.
+            if (pwEdt.text.toString() == "1234"){
+                if (idSaveCheckBox.isChecked) {
+                    val inputId = idEdt.text.toString()
+                    ContextUtil.setUserId(mContext, inputId)
+                }
+            }
+
         }
 
     }
