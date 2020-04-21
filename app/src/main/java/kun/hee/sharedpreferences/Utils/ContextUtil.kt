@@ -1,7 +1,25 @@
 package kun.hee.sharedpreferences.Utils
 
+import android.content.Context
+
 class ContextUtil {
-    companion object{
+
+
+    companion object{ // Java의 static 변수 / 메쏘드에 해당하는 코드들을 적는 영역.
+
+        val prefName = "MyPref" // id를 받아 저장할 ""파일명""
+        val USER_ID = "USER_ID" // 저장될 항목의 이름.(그 사람 코드? 그사람이 사용하는 정보(id)XXX)
+
+        fun setUserId (context: Context, inputId:String){ //★메모장 파일을 여는 행위
+            val pref = context.getSharedPreferences(prefName, Context.MODE_PRIVATE)
+                                // 저장할 파일을 열어라(파일명, 우리앱전용으로쓸께)
+            // USER_ID항목에 함수의 재료로 들어오는 String 변수 저장.
+
+            pref.edit().putString(USER_ID, inputId).apply() //아이디를 입력받은 값으로 저장(apply)해 주겠다.
+        }
+
+
+
 
     }
 }
